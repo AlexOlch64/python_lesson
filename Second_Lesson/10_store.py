@@ -46,20 +46,36 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # Вывести стоимость каждого товара на складе: один раз распечать сколько всего столов, стульев и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
 
-# WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
-# Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
 # TODO здесь ваш код
+table_code = goods['Стол']
+table_item = store[table_code]
+table_item_first = table_item[0]
+table_item_second = table_item[1]
+sum_table_first = table_item_first['quantity'] * table_item_first['price']
+sum_table_second = table_item_second['quantity'] * table_item_second['price']
+full_price_table = sum_table_first + sum_table_second
+table_quantity = table_item_first['quantity'] + table_item_second['quantity']
+print('Стол -', table_quantity, 'шт, стоимость', full_price_table, 'руб')
 
-##########################################################################################
-# ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
-# нужно зайти в ЛМС (LMS - Learning Management System ) по адресу http://go.skillbox.ru  #
-# и оформить попытку сдачи ДЗ! Без этого ДЗ не будет проверяться!                        #
-# Как оформить попытку сдачи смотрите видео - https://youtu.be/qVpN0L-C3LU               #
-##########################################################################################
+sofa_code = goods['Диван']
+sofa_item = store[sofa_code]
+sofa_item_first = sofa_item[0]
+sofa_item_second = sofa_item[1]
+sum_sofa_first = sofa_item_first['quantity'] * sofa_item_first['price']
+sum_sofa_second = sofa_item_second['quantity'] * sofa_item_second['price']
+full_price_sofa = sum_sofa_first + sum_sofa_second
+sofa_quantity = sofa_item_first['quantity'] + sofa_item_second['quantity']
+print('Диван -', sofa_quantity, 'шт, стоимость', full_price_sofa, 'руб')
 
-
-
-
-
-
+chair_code = goods['Стул']
+chair_item = store[chair_code]
+chair_item_first = chair_item[0]
+chair_item_second = chair_item[1]
+chair_item_third = chair_item[2]
+sum_chair_first = chair_item_first['quantity'] * chair_item_first['price']
+sum_chair_second = chair_item_second['quantity'] * chair_item_second['price']
+sum_chair_third = chair_item_third['quantity'] * chair_item_third['price']
+full_price_chair = sum_chair_first + sum_chair_second + sum_chair_third
+chair_quantity = chair_item_first['quantity'] + chair_item_second['quantity'] + chair_item_third['quantity']
+print('Стул -', chair_quantity, 'шт, стоимость', full_price_chair, 'руб')

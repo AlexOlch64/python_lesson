@@ -9,5 +9,9 @@
 #   Целочисленное деление ХХХ на YYY дает ZZZ
 
 a, b = 179, 37
-
+division_result = 0
 # TODO здесь ваш код
+while a >= b:
+    a = a - b
+    division_result += 1
+print(division_result)

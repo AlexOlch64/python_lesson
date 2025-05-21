@@ -12,3 +12,12 @@
 educational_grant, expenses = 10000, 12000
 
 # TODO здесь ваш код
+count_month = 10
+money = 0
+while count_month !=0:
+    money += educational_grant
+    money -= expenses
+    expenses *= 1.03
+    count_month -= 1
+money = -money
+print('Студенту надо попросить', round(money,2), 'рублей у родителей')

@@ -50,6 +50,14 @@ store = {
 
 
 
-
+for prod in goods:
+    product = prod
+    code = goods[prod]
+    count_product, price_product = 0, 0
+    for item in store[code]:
+        summ = item['quantity'] * item['price']
+        price_product += summ
+        count_product += item['quantity']
+    print(product, '-', count_product, 'шт, стоимость',price_product, 'руб')
 
 
